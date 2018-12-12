@@ -114,6 +114,12 @@
                                     <action selector="buttonPressed:" destination="Ap3-qz-fFp" eventType="touchUpInside" id="mMe-gv-Ud9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-15-35D">
+                                <rect key="frame" x="166.5" y="596.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -126,8 +132,10 @@
                             <constraint firstItem="YpM-o6-nZ3" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="a7b-27-NdM"/>
                             <constraint firstItem="qJT-Pw-L9w" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="air-Op-GGz"/>
                             <constraint firstItem="YpM-o6-nZ3" firstAttribute="top" secondItem="mFG-Jk-y2v" secondAttribute="top" constant="10" id="f91-lg-9yu"/>
+                            <constraint firstAttribute="bottom" secondItem="aYu-15-35D" secondAttribute="bottom" constant="50" id="i2f-n4-Iy4"/>
                             <constraint firstItem="qJT-Pw-L9w" firstAttribute="leading" secondItem="mFG-Jk-y2v" secondAttribute="leading" constant="20" id="kI6-1X-Ksw"/>
                             <constraint firstItem="ER2-4j-f2s" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="kOy-qc-oV5"/>
+                            <constraint firstItem="aYu-15-35D" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="mg7-69-yzR"/>
                             <constraint firstItem="qJT-Pw-L9w" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="nMi-Ng-KHU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mFG-Jk-y2v"/>
@@ -144,6 +152,7 @@
                         <outlet property="labelB" destination="Y5v-7f-SfG" id="uVn-U0-7qL"/>
                         <outlet property="labelC" destination="SXY-Cc-aNH" id="Nwy-S0-NqN"/>
                         <outlet property="labelD" destination="MwS-Hz-FJD" id="kpM-x5-38g"/>
+                        <outlet property="labelPoints" destination="aYu-15-35D" id="mAg-u5-oPg"/>
                         <outlet property="labelQuestion" destination="qJT-Pw-L9w" id="z14-Q5-UFP"/>
                         <segue destination="dvz-MX-Ssx" kind="show" identifier="ResultsSegue" id="A6H-72-IDa"/>
                     </connections>

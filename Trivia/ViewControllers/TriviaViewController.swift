@@ -21,6 +21,7 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var labelC: UILabel!
     @IBOutlet weak var labelD: UILabel!
     @IBOutlet weak var buttonNextQuestion: UIButton!
+    @IBOutlet weak var labelPoints: UILabel!
     
     var menuController: MenuController!
     var currentGame: CurrentGame!
@@ -45,6 +46,7 @@ class TriviaViewController: UIViewController {
     
     func updateUI() {
         refreshButtonsAndLabels()
+        labelPoints.text = "Points: " +  String(currentGame.correcetAnswerAmount)
         
         labelAmount.text = "Question " + String(currentGame.currentQuestion) + " (" + String(currentGame.currentQuestion) + "/10)"
         labelQuestion.text = questionArray[currentGame.currentQuestion-1].question
@@ -88,22 +90,22 @@ class TriviaViewController: UIViewController {
         switch sender {
         case buttonA:
             if currentGame.correctAnswerIndex == 0 {
-                currentGame.correcetAnswerAmount += 1
+                currentGame.correcetAnswerAmount += 10
             }
             setLabelColorsAndButtons()
         case buttonB:
             if currentGame.correctAnswerIndex == 1 {
-                currentGame.correcetAnswerAmount += 1
+                currentGame.correcetAnswerAmount += 10
             }
             setLabelColorsAndButtons()
         case buttonC:
             if currentGame.correctAnswerIndex == 2 {
-                currentGame.correcetAnswerAmount += 1
+                currentGame.correcetAnswerAmount += 10
             }
             setLabelColorsAndButtons()
         case buttonD:
             if currentGame.correctAnswerIndex == 3 {
-                currentGame.correcetAnswerAmount += 1
+                currentGame.correcetAnswerAmount += 10
             }
             setLabelColorsAndButtons()
         case buttonNextQuestion:
@@ -119,6 +121,7 @@ class TriviaViewController: UIViewController {
     }
     
     func setLabelColorsAndButtons() {
+        labelPoints.text = "Points: " +  String(currentGame.correcetAnswerAmount)
         buttonNextQuestion.isHidden = false
         buttonA.isEnabled = false
         buttonB.isEnabled = false
