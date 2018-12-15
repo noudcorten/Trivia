@@ -18,39 +18,36 @@ class HighScoresTableViewController: UIViewController {
     let highScoreController = HighScoreController()
     var highestScore: Int = 0
     var highestScoreName: String = ""
+    var highScoreList: [Score] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        let highScoreList = getHighScoreList()
-        getHighScore(list: highScoreList)
-        labelScore.text = String(highestScore)
-        labelName.text = highestScoreName
+        getHighScore()
+        sleep(1)
+        updateUI()
     }
     
-    func getHighScoreList() -> [Score] {
-        var scoreList: [Score] = []
+    func getHighScore(){
         highScoreController.fetchQuestions { (highScores:[[String: Any]]?) in
             if let highScores = highScores {
-                sleep(2)
                 for score in highScores {
                     if let scoreObject = Score(dict: score) {
-                        scoreList.append(scoreObject)
+                        self.highScoreList.append(scoreObject)
                     }
                 }
             }
         }
-        sleep(3)
-        return scoreList
     }
     
-    func getHighScore(list: [Score]){
-        for scoreObject in list {
+    func updateUI() {
+        for scoreObject in highScoreList {
             if Int(scoreObject.score)! >= highestScore {
                 highestScore = Int(scoreObject.score)!
                 highestScoreName = scoreObject.name
             }
         }
+        labelScore.text = String(highestScore)
+        labelName.text = highestScoreName
     }
-
 }

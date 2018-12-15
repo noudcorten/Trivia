@@ -1,5 +1,5 @@
 //
-//  HighScoresController.swift
+//  HighScoreController.swift
 //  Trivia
 //
 //  Created by Noud on 12/9/18.
@@ -9,6 +9,10 @@
 import Foundation
 
 class HighScoreController {
+    // MARK: used for observers
+    static let scoreUpdatedNotification = Notification.Name("HighScoreController.scoreUpdated")
+    
+    // MARK: sends give name and score to the server
     func postHighScores(name: String, score: Int) {
         let url = URL(string: "https://ide50-noud-native-app.cs50.io:8080/highscores")!
         var request = URLRequest(url: url)
@@ -33,7 +37,8 @@ class HighScoreController {
         task.resume()
     }
     
-    func fetchQuestions(completion: @escaping ([[String: Any]]?) -> Void) {
+    // MARK: fetches the scores on the server
+    func fetchScores(completion: @escaping ([[String: Any]]?) -> Void) {
         let baseURL = URL(string: "https://ide50-noud-native-app.cs50.io:8080/highscores")!
         let request = URLRequest(url: baseURL)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -52,9 +57,5 @@ class HighScoreController {
             }
         }
         task.resume()
-    }
-    
-    struct Score {
-        
     }
 }

@@ -14,6 +14,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: properties
     @IBOutlet weak var ButtonRandom: UIButton!
     @IBOutlet weak var ButtonScienceAndNature: UIButton!
     @IBOutlet weak var ButtonSports: UIButton!
@@ -23,6 +24,7 @@ class CategoryViewController: UIViewController {
     var category: String!
     var categoryName: String!
     
+    // MARK: selects the question category
     @IBAction func ButtonPressed(_ sender: UIButton) {
         switch sender {
         case ButtonRandom:
@@ -45,10 +47,12 @@ class CategoryViewController: UIViewController {
         performSegue(withIdentifier: "choiceSegue", sender: nil)
     }
     
+    // MARK: used to go back to beginscreen when quiz is done
     @IBAction func unwindToQuizIntroduction(segue:
     UIStoryboardSegue) {
     }
     
+    // MARK: prepare for next segue by initializing MenuController and CurrentGame
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "choiceSegue" {
             let triviaViewController = segue.destination as! TriviaViewController

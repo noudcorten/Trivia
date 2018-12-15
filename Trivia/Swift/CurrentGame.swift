@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: used to store all the data in the current game
 struct CurrentGame {
     var currentQuestion: Int
     var correctAnswerIndex: Int
@@ -21,10 +22,12 @@ struct CurrentGame {
         self.category = category
     }
     
+    // MARK: tells the ViewController what is the current question index
     mutating func update() {
         self.currentQuestion += 1
     }
     
+    // MARK: gets a list with all the possible answers and shuffles them into a new list but keeps track of where the right answer is in the list
     mutating func shuffleList(list: [String]) -> [String] {
         let correctAnswer = list[0]
         let shuffledSequence = list.shuffled()
@@ -34,6 +37,7 @@ struct CurrentGame {
         return shuffledSequence
     }
     
+    // MARK: checks if the quiz is done
     func gameIsDone() -> Bool {
         if self.currentQuestion == 10 {
             return true

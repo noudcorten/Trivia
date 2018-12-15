@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416779421C46CE3007EB8F0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416779321C46CE3007EB8F0 /* TableViewCell.swift */; };
+		0416779821C46F86007EB8F0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416779721C46F86007EB8F0 /* TableViewController.swift */; };
 		0457D6D521BFD081008E4232 /* AchievedScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457D6D421BFD081008E4232 /* AchievedScoreViewController.swift */; };
 		0478027721BFC3FC00453EC7 /* CurrentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478027621BFC3FC00453EC7 /* CurrentGame.swift */; };
 		047FEB3921BC0EF200B072B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB3821BC0EF200B072B3 /* AppDelegate.swift */; };
 		047FEB3E21BC0EF200B072B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FEB3C21BC0EF200B072B3 /* Main.storyboard */; };
 		047FEB4021BC0EF300B072B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047FEB3F21BC0EF300B072B3 /* Assets.xcassets */; };
 		047FEB4321BC0EF300B072B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FEB4121BC0EF300B072B3 /* LaunchScreen.storyboard */; };
-		047FEB4D21BC103800B072B3 /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB4C21BC103800B072B3 /* HighScoresTableViewController.swift */; };
 		047FEB4F21BC104400B072B3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB4E21BC104400B072B3 /* CategoryViewController.swift */; };
 		047FEB5121BC147D00B072B3 /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5021BC147D00B072B3 /* TriviaViewController.swift */; };
 		047FEB5321BD24FA00B072B3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5221BD24FA00B072B3 /* MenuController.swift */; };
 		047FEB5521BD2CDE00B072B3 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5421BD2CDE00B072B3 /* Questions.swift */; };
-		047FEB5721BD2DE800B072B3 /* HighScoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5621BD2DE800B072B3 /* HighScoresController.swift */; };
+		047FEB5721BD2DE800B072B3 /* HighScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5621BD2DE800B072B3 /* HighScoreController.swift */; };
+		0491341321C587D90087127B /* AllScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491341221C587D90087127B /* AllScores.swift */; };
 		04F1F7E021C11955001B7E55 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F7DF21C11955001B7E55 /* Score.swift */; };
 		C8468E6CB241305063EA2507 /* Pods_Trivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B150EE6919DA0F3805552A8 /* Pods_Trivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0416779321C46CE3007EB8F0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0416779721C46F86007EB8F0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0457D6D421BFD081008E4232 /* AchievedScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedScoreViewController.swift; sourceTree = "<group>"; };
 		0478027621BFC3FC00453EC7 /* CurrentGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGame.swift; sourceTree = "<group>"; };
 		047FEB3521BC0EF200B072B3 /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,12 +36,12 @@
 		047FEB3F21BC0EF300B072B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047FEB4221BC0EF300B072B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047FEB4421BC0EF300B072B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		047FEB4C21BC103800B072B3 /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
 		047FEB4E21BC104400B072B3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		047FEB5021BC147D00B072B3 /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
 		047FEB5221BD24FA00B072B3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		047FEB5421BD2CDE00B072B3 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		047FEB5621BD2DE800B072B3 /* HighScoresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresController.swift; sourceTree = "<group>"; };
+		047FEB5621BD2DE800B072B3 /* HighScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreController.swift; sourceTree = "<group>"; };
+		0491341221C587D90087127B /* AllScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllScores.swift; sourceTree = "<group>"; };
 		04F1F7DF21C11955001B7E55 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		52C27668CA8665C0D098B55F /* Pods-Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trivia/Pods-Trivia.release.xcconfig"; sourceTree = "<group>"; };
 		9B150EE6919DA0F3805552A8 /* Pods_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,8 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				047FEB5221BD24FA00B072B3 /* MenuController.swift */,
-				047FEB5621BD2DE800B072B3 /* HighScoresController.swift */,
+				047FEB5621BD2DE800B072B3 /* HighScoreController.swift */,
 				04F1F7DF21C11955001B7E55 /* Score.swift */,
+				0491341221C587D90087127B /* AllScores.swift */,
 				047FEB5421BD2CDE00B072B3 /* Questions.swift */,
 				0478027621BFC3FC00453EC7 /* CurrentGame.swift */,
 			);
@@ -106,7 +111,8 @@
 				047FEB4E21BC104400B072B3 /* CategoryViewController.swift */,
 				047FEB5021BC147D00B072B3 /* TriviaViewController.swift */,
 				0457D6D421BFD081008E4232 /* AchievedScoreViewController.swift */,
-				047FEB4C21BC103800B072B3 /* HighScoresTableViewController.swift */,
+				0416779321C46CE3007EB8F0 /* TableViewCell.swift */,
+				0416779721C46F86007EB8F0 /* TableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,14 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				047FEB5321BD24FA00B072B3 /* MenuController.swift in Sources */,
+				0416779821C46F86007EB8F0 /* TableViewController.swift in Sources */,
 				0478027721BFC3FC00453EC7 /* CurrentGame.swift in Sources */,
 				0457D6D521BFD081008E4232 /* AchievedScoreViewController.swift in Sources */,
 				047FEB5521BD2CDE00B072B3 /* Questions.swift in Sources */,
 				04F1F7E021C11955001B7E55 /* Score.swift in Sources */,
-				047FEB5721BD2DE800B072B3 /* HighScoresController.swift in Sources */,
+				047FEB5721BD2DE800B072B3 /* HighScoreController.swift in Sources */,
+				0416779421C46CE3007EB8F0 /* TableViewCell.swift in Sources */,
 				047FEB5121BC147D00B072B3 /* TriviaViewController.swift in Sources */,
-				047FEB4D21BC103800B072B3 /* HighScoresTableViewController.swift in Sources */,
 				047FEB4F21BC104400B072B3 /* CategoryViewController.swift in Sources */,
+				0491341321C587D90087127B /* AllScores.swift in Sources */,
 				047FEB3921BC0EF200B072B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 import Foundation
 import HTMLString
 
+// MARK: stores all the available data of the current question
 struct Question: Codable {
     let category: String
     let type: String
