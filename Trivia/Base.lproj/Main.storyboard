@@ -111,13 +111,19 @@
                                 <rect key="frame" x="136.5" y="512.5" width="102" height="30"/>
                                 <state key="normal" title="Next Question!"/>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="Ap3-qz-fFp" eventType="touchUpInside" id="mMe-gv-Ud9"/>
+                                    <action selector="nextQuestion:" destination="Ap3-qz-fFp" eventType="touchUpInside" id="Lpu-vw-SVV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-15-35D">
                                 <rect key="frame" x="166.5" y="596.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-LL-gfK">
+                                <rect key="frame" x="313" y="73" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -135,8 +141,10 @@
                             <constraint firstAttribute="bottom" secondItem="aYu-15-35D" secondAttribute="bottom" constant="50" id="i2f-n4-Iy4"/>
                             <constraint firstItem="qJT-Pw-L9w" firstAttribute="leading" secondItem="mFG-Jk-y2v" secondAttribute="leading" constant="20" id="kI6-1X-Ksw"/>
                             <constraint firstItem="ER2-4j-f2s" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="kOy-qc-oV5"/>
+                            <constraint firstItem="mFG-Jk-y2v" firstAttribute="trailing" secondItem="Svz-LL-gfK" secondAttribute="trailing" constant="20" id="lDt-Hw-Dsd"/>
                             <constraint firstItem="aYu-15-35D" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="mg7-69-yzR"/>
                             <constraint firstItem="qJT-Pw-L9w" firstAttribute="centerX" secondItem="iQV-Cc-ubT" secondAttribute="centerX" id="nMi-Ng-KHU"/>
+                            <constraint firstItem="Svz-LL-gfK" firstAttribute="top" secondItem="mFG-Jk-y2v" secondAttribute="top" constant="9" id="xEU-4J-5qA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mFG-Jk-y2v"/>
                     </view>
@@ -152,6 +160,7 @@
                         <outlet property="labelB" destination="Y5v-7f-SfG" id="uVn-U0-7qL"/>
                         <outlet property="labelC" destination="SXY-Cc-aNH" id="Nwy-S0-NqN"/>
                         <outlet property="labelD" destination="MwS-Hz-FJD" id="kpM-x5-38g"/>
+                        <outlet property="labelDifficulty" destination="Svz-LL-gfK" id="i7C-PW-jMh"/>
                         <outlet property="labelPoints" destination="aYu-15-35D" id="mAg-u5-oPg"/>
                         <outlet property="labelQuestion" destination="qJT-Pw-L9w" id="z14-Q5-UFP"/>
                         <segue destination="dvz-MX-Ssx" kind="show" identifier="ResultsSegue" id="A6H-72-IDa"/>

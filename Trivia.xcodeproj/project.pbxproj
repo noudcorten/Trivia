@@ -18,7 +18,7 @@
 		047FEB4F21BC104400B072B3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB4E21BC104400B072B3 /* CategoryViewController.swift */; };
 		047FEB5121BC147D00B072B3 /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5021BC147D00B072B3 /* TriviaViewController.swift */; };
 		047FEB5321BD24FA00B072B3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5221BD24FA00B072B3 /* MenuController.swift */; };
-		047FEB5521BD2CDE00B072B3 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5421BD2CDE00B072B3 /* Questions.swift */; };
+		047FEB5521BD2CDE00B072B3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5421BD2CDE00B072B3 /* Question.swift */; };
 		047FEB5721BD2DE800B072B3 /* HighScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FEB5621BD2DE800B072B3 /* HighScoreController.swift */; };
 		0491341321C587D90087127B /* AllScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491341221C587D90087127B /* AllScores.swift */; };
 		04F1F7E021C11955001B7E55 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1F7DF21C11955001B7E55 /* Score.swift */; };
@@ -39,7 +39,7 @@
 		047FEB4E21BC104400B072B3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		047FEB5021BC147D00B072B3 /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
 		047FEB5221BD24FA00B072B3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		047FEB5421BD2CDE00B072B3 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		047FEB5421BD2CDE00B072B3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		047FEB5621BD2DE800B072B3 /* HighScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreController.swift; sourceTree = "<group>"; };
 		0491341221C587D90087127B /* AllScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllScores.swift; sourceTree = "<group>"; };
 		04F1F7DF21C11955001B7E55 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				047FEB5621BD2DE800B072B3 /* HighScoreController.swift */,
 				04F1F7DF21C11955001B7E55 /* Score.swift */,
 				0491341221C587D90087127B /* AllScores.swift */,
-				047FEB5421BD2CDE00B072B3 /* Questions.swift */,
+				047FEB5421BD2CDE00B072B3 /* Question.swift */,
 				0478027621BFC3FC00453EC7 /* CurrentGame.swift */,
 			);
 			path = Swift;
@@ -258,7 +258,7 @@
 				0416779821C46F86007EB8F0 /* TableViewController.swift in Sources */,
 				0478027721BFC3FC00453EC7 /* CurrentGame.swift in Sources */,
 				0457D6D521BFD081008E4232 /* AchievedScoreViewController.swift in Sources */,
-				047FEB5521BD2CDE00B072B3 /* Questions.swift in Sources */,
+				047FEB5521BD2CDE00B072B3 /* Question.swift in Sources */,
 				04F1F7E021C11955001B7E55 /* Score.swift in Sources */,
 				047FEB5721BD2DE800B072B3 /* HighScoreController.swift in Sources */,
 				0416779421C46CE3007EB8F0 /* TableViewCell.swift in Sources */,

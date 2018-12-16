@@ -1,5 +1,5 @@
 //
-//  Questions.swift
+//  Question.swift
 //  Trivia
 //
 //  Created by Noud on 12/9/18.

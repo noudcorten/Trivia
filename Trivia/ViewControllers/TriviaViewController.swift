@@ -23,6 +23,7 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var labelD: UILabel!
     @IBOutlet weak var buttonNextQuestion: UIButton!
     @IBOutlet weak var labelPoints: UILabel!
+    @IBOutlet weak var labelDifficulty: UILabel!
     
     var menuController: MenuController!
     var currentGame: CurrentGame!
@@ -59,6 +60,7 @@ class TriviaViewController: UIViewController {
         
             self.labelAmount.text = "Question " + String(self.currentGame.currentQuestion) + " (" + String(self.currentGame.currentQuestion) + "/10)"
             self.labelQuestion.text = self.questionArray[self.currentGame.currentQuestion-1].question
+            self.setDifficulty(setColor: true, givePoints: false)
         
             let answer_list = self.make_answer_list()
             let shuffledList = self.currentGame.shuffleList(list: answer_list)
@@ -81,6 +83,40 @@ class TriviaViewController: UIViewController {
             self.labelD.isHidden = bool
             self.buttonNextQuestion.isHidden = bool
             self.labelPoints.isHidden = bool
+            self.labelDifficulty.isHidden = bool
+        }
+    }
+    
+    // MARK: function which sets the difficulty label or sets the right amount of points
+    func setDifficulty(setColor: Bool, givePoints: Bool) {
+        let difficulty = self.questionArray[self.currentGame.currentQuestion-1].difficulty
+        print(difficulty)
+        labelDifficulty.text = difficulty.uppercased()
+        
+        switch difficulty {
+        case "easy":
+            if setColor == true {
+                labelDifficulty.textColor = UIColor.green
+            }
+            if givePoints == true {
+                currentGame.correcetAnswerAmount += 10
+            }
+        case "medium":
+            if setColor == true {
+                labelDifficulty.textColor = UIColor.orange
+            }
+            if givePoints == true {
+                currentGame.correcetAnswerAmount += 20
+            }
+        case "hard":
+            if setColor == true {
+                labelDifficulty.textColor = UIColor.red
+            }
+            if givePoints == true {
+                currentGame.correcetAnswerAmount += 30
+                }
+        default:
+            return
         }
     }
     
@@ -126,41 +162,41 @@ class TriviaViewController: UIViewController {
     // MARK: function which reacts on a button press. Possible buttons are:
     // - Answers buttons (A,B,C,D)
     //  => checks if answer is correct and shows which was the right and wrong answers
-    // - Next question button
-    //  => checks if the quiz is done (go to result screen, else: go to next question)
+
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch sender {
         case buttonA:
             if currentGame.correctAnswerIndex == 0 {
-                currentGame.correcetAnswerAmount += 10
+                setDifficulty(setColor: false, givePoints: true)
             }
-            setLabelColorsAndButtons()
         case buttonB:
             if currentGame.correctAnswerIndex == 1 {
-                currentGame.correcetAnswerAmount += 10
+                setDifficulty(setColor: false, givePoints: true)
             }
-            setLabelColorsAndButtons()
         case buttonC:
             if currentGame.correctAnswerIndex == 2 {
-                currentGame.correcetAnswerAmount += 10
+                setDifficulty(setColor: false, givePoints: true)
             }
-            setLabelColorsAndButtons()
         case buttonD:
             if currentGame.correctAnswerIndex == 3 {
-                currentGame.correcetAnswerAmount += 10
-            }
-            setLabelColorsAndButtons()
-        case buttonNextQuestion:
-            if currentGame.gameIsDone() == true {
-                performSegue(withIdentifier: "ResultsSegue", sender: nil)
-            } else {
-                currentGame.update()
-                updateUI()
+                setDifficulty(setColor: false, givePoints: true)
             }
         default:
             return
         }
+        setLabelColorsAndButtons()
     }
+    
+    // MARK: checks if the quiz is done (yes: go to result screen, no: go to next question)
+    @IBAction func nextQuestion(_ sender: Any) {
+        if currentGame.gameIsDone() == true {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        } else {
+            currentGame.update()
+            updateUI()
+        }
+    }
+    
     
     // MARK: updates the points label, hides the answer buttons and sets the color of the answer label according to their status (wrong: red, right: green)
     func setLabelColorsAndButtons() {
