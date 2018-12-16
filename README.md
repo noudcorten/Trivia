@@ -13,6 +13,7 @@
 ## LAST VERSION UPDATE
 * Result screen now includes all the score of the users
 * Scores are ranked from highest to lowest
+* Added difficulty label and gives extra points according to the difficulty
 
 <p float="left">
   <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia1.png" width="200" height="400"/>
