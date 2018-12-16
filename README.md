@@ -16,7 +16,7 @@
 
 <p float="left">
   <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia1.png" width="200" height="400"/>
-  <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia2.png" width="200" height="400"/>
+  <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia5.png" width="200" height="400"/>
   <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia3.png" width="200" height="400"/>
   <img src="https://github.com/noudcorten/Trivia/blob/master/Trivia4.png" width="200" height="400"/>
 </p>
