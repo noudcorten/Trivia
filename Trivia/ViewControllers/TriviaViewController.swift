@@ -92,6 +92,7 @@ class TriviaViewController: UIViewController {
         case "easy":
             if setColor == true {
                 labelDifficulty.textColor = UIColor.green
+                print("test")
             }
             if givePoints == true {
                 currentGame.correcetAnswerAmount += 10
@@ -128,32 +129,41 @@ class TriviaViewController: UIViewController {
     // MARK: resets the answer labels colors and the answer buttons
     func refreshButtonsAndLabels() {
         buttonNextQuestion.isHidden = true
-        for label in allLabels {
-            label.textColor = UIColor.black
+        DispatchQueue.main.async {
+            for label in self.allLabels {
+                if label == self.labelDifficulty {
+                    continue
+                }
+                label.textColor = UIColor.black
+            }
         }
+        
         hideButtons(bool: true)
     }
     
     // MARK: hides or shows the answer buttons
     func hideButtons(bool: Bool) {
-        buttonA.isEnabled = bool
-        buttonB.isEnabled = bool
-        buttonC.isEnabled = bool
-        buttonD.isEnabled = bool
+        DispatchQueue.main.async {
+            self.buttonA.isEnabled = bool
+            self.buttonB.isEnabled = bool
+            self.buttonC.isEnabled = bool
+            self.buttonD.isEnabled = bool
+        }
     }
     
     // MARK: sets every answer label with an answer from the shuffled list
     func updateLabels(list: [String]) {
-        labelA.text = list[0]
-        labelB.text = list[1]
-        labelC.text = list[2]
-        labelD.text = list[3]
+        DispatchQueue.main.async {
+            self.labelA.text = list[0]
+            self.labelB.text = list[1]
+            self.labelC.text = list[2]
+            self.labelD.text = list[3]
+        }
     }
     
     // MARK: function which reacts on a button press. Possible buttons are:
     // - Answers buttons (A,B,C,D)
     //  => checks if answer is correct and shows which was the right and wrong answers
-
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch sender {
         case buttonA:
