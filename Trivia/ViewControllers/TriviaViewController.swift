@@ -126,7 +126,7 @@ class TriviaViewController: UIViewController {
         return list
     }
     
-    // MARK: resets the answer labels colors and the answer buttons
+    // MARK: resets all the label colors (except category label) and the shows the answer buttons
     func refreshButtonsAndLabels() {
         buttonNextQuestion.isHidden = true
         DispatchQueue.main.async {
