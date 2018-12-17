@@ -10,7 +10,7 @@ import UIKit
 
 class TriviaViewController: UIViewController {
     
-    // MARK: properies
+    // MARK: properties
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var buttonA: UIButton!
@@ -24,6 +24,8 @@ class TriviaViewController: UIViewController {
     @IBOutlet weak var buttonNextQuestion: UIButton!
     @IBOutlet weak var labelPoints: UILabel!
     @IBOutlet weak var labelDifficulty: UILabel!
+    @IBOutlet var allLabels: [UILabel]!
+    @IBOutlet var allButtons: [UIButton]!
     
     var menuController: MenuController!
     var currentGame: CurrentGame!
@@ -51,6 +53,7 @@ class TriviaViewController: UIViewController {
     // - Updating the question
     // - Updating question index
     // - Updating the possible answers
+    // - Updating the difficulty label
     
     func updateUI() {
         DispatchQueue.main.async {
@@ -71,26 +74,18 @@ class TriviaViewController: UIViewController {
     // MARK: hides interface when loading questions, and shows interface when loading is done
     func hideInterface(bool: Bool) {
         DispatchQueue.main.async {
-            self.labelAmount.isHidden = bool
-            self.labelQuestion.isHidden = bool
-            self.buttonA.isHidden = bool
-            self.buttonB.isHidden = bool
-            self.buttonC.isHidden = bool
-            self.buttonD.isHidden = bool
-            self.labelA.isHidden = bool
-            self.labelB.isHidden = bool
-            self.labelC.isHidden = bool
-            self.labelD.isHidden = bool
-            self.buttonNextQuestion.isHidden = bool
-            self.labelPoints.isHidden = bool
-            self.labelDifficulty.isHidden = bool
+            for label in self.allLabels {
+                label.isHidden = bool
+            }
+            for button in self.allButtons {
+                button.isHidden = bool
+            }
         }
     }
     
     // MARK: function which sets the difficulty label or sets the right amount of points
     func setDifficulty(setColor: Bool, givePoints: Bool) {
         let difficulty = self.questionArray[self.currentGame.currentQuestion-1].difficulty
-        print(difficulty)
         labelDifficulty.text = difficulty.uppercased()
         
         switch difficulty {
@@ -133,14 +128,10 @@ class TriviaViewController: UIViewController {
     // MARK: resets the answer labels colors and the answer buttons
     func refreshButtonsAndLabels() {
         buttonNextQuestion.isHidden = true
-        
-        labelA.textColor = UIColor.black
-        labelB.textColor = UIColor.black
-        labelC.textColor = UIColor.black
-        labelD.textColor = UIColor.black
-        
+        for label in allLabels {
+            label.textColor = UIColor.black
+        }
         hideButtons(bool: true)
-
     }
     
     // MARK: hides or shows the answer buttons
@@ -196,7 +187,6 @@ class TriviaViewController: UIViewController {
             updateUI()
         }
     }
-    
     
     // MARK: updates the points label, hides the answer buttons and sets the color of the answer label according to their status (wrong: red, right: green)
     func setLabelColorsAndButtons() {

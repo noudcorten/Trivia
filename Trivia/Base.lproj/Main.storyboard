@@ -163,6 +163,19 @@
                         <outlet property="labelDifficulty" destination="Svz-LL-gfK" id="i7C-PW-jMh"/>
                         <outlet property="labelPoints" destination="aYu-15-35D" id="mAg-u5-oPg"/>
                         <outlet property="labelQuestion" destination="qJT-Pw-L9w" id="z14-Q5-UFP"/>
+                        <outletCollection property="allLabels" destination="qJT-Pw-L9w" collectionClass="NSMutableArray" id="eVp-xv-tRx"/>
+                        <outletCollection property="allLabels" destination="YpM-o6-nZ3" collectionClass="NSMutableArray" id="hX3-Fv-qKo"/>
+                        <outletCollection property="allLabels" destination="Svz-LL-gfK" collectionClass="NSMutableArray" id="E0z-PG-Fez"/>
+                        <outletCollection property="allLabels" destination="vq7-gV-X4r" collectionClass="NSMutableArray" id="iF7-QB-BHM"/>
+                        <outletCollection property="allLabels" destination="Y5v-7f-SfG" collectionClass="NSMutableArray" id="5lz-t2-YFJ"/>
+                        <outletCollection property="allLabels" destination="SXY-Cc-aNH" collectionClass="NSMutableArray" id="1c3-Qh-OK8"/>
+                        <outletCollection property="allLabels" destination="MwS-Hz-FJD" collectionClass="NSMutableArray" id="WeZ-WH-rPH"/>
+                        <outletCollection property="allLabels" destination="aYu-15-35D" collectionClass="NSMutableArray" id="NHx-1G-lIo"/>
+                        <outletCollection property="allButtons" destination="FaZ-oC-QIS" collectionClass="NSMutableArray" id="iWV-ru-GkR"/>
+                        <outletCollection property="allButtons" destination="Poq-zQ-wM9" collectionClass="NSMutableArray" id="x6v-vY-HKw"/>
+                        <outletCollection property="allButtons" destination="PVt-Ja-gpa" collectionClass="NSMutableArray" id="Cca-tN-UPs"/>
+                        <outletCollection property="allButtons" destination="sNF-cu-lnb" collectionClass="NSMutableArray" id="HTD-MI-UTN"/>
+                        <outletCollection property="allButtons" destination="ER2-4j-f2s" collectionClass="NSMutableArray" id="Aud-Eq-rvr"/>
                         <segue destination="dvz-MX-Ssx" kind="show" identifier="ResultsSegue" id="A6H-72-IDa"/>
                     </connections>
                 </viewController>
